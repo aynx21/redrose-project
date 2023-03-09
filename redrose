@@ -1,0 +1,45 @@
+#include <iostream>
+using namespace std;
+
+class App {
+public:
+       int girls_dated;
+       int boys_dated;
+       int bd, gd;
+       
+public:
+      void setG_dated(int bd , int gd ) {
+           girls_dated = gd;
+           boys_dated = bd ;
+      }
+     
+} ;
+
+class Matchup :  public App {
+public :    
+        int app_used() {
+          return  girls_dated + boys_dated ;
+        }
+};
+int main() {
+int rose;
+Matchup mt;
+
+cout << " *** Welcome to Redrose *** \n ";
+cout << " Are you a girl? || Press ONE ||  \n ";
+cin >> rose;
+
+if (rose == 1){
+    cout << " How many boys have you dated ? \n " ;
+    cin >> mt.bd;
+    cout << " How many Girls have you dated ? \n " ;
+    cin>> mt.gd;
+    }
+     
+mt.setG_dated(mt.bd, mt.gd);
+
+    
+}
+
+
+    
