@@ -1,0 +1,67 @@
+#include <iostream>
+using namespace std;
+
+class App {
+public:
+       int girls_dated;
+       int boys_dated;
+       int bd, gd;
+       
+public:
+      void setG_dated(int bd , int gd ) {
+           girls_dated = gd;
+           boys_dated = bd ;
+      }
+     
+} ;
+
+class Matchup :  public App {
+public :    
+        int app_used() {
+          return  girls_dated + boys_dated ;
+        }
+};
+int main() {
+char name [50];
+int rose;
+Matchup mt;
+
+cout << " *** Welcome to Redrose *** \n\n ";
+cout << " Please enter your name: \n " ;
+cin >> name;
+cout << "\n Hey there, " << name << " \n " << endl ;
+cout << " Are you a girl? || Press ONE ||  \n ";
+cout << "Are you a boy ? || Press Any other Key || \n " ;
+cin >> rose;
+
+if (rose == 1){
+    cout << " How many boys have you dated ? \n " ;
+    cin >> mt.bd;
+    cout << " How many Girls have you dated ? \n " ;
+    cin>> mt.gd;
+    
+    if (mt.gd > mt.bd){
+        
+        cout << " Being a lesbian is fine, We all want acceptance, Love is all we want, Discover more through our portal;) \n " ;  
+    }
+    else {
+        cout << " Dating a boy is tough but you sure look ready :) \n " ;
+    }
+    }
+    
+else if ( rose >=2 ) {
+    
+    cout << " How many Girls have you dated ? \n " ;
+    cin>> mt.gd;
+    cout << " How many boys have you dated ? \n " ;
+    cin >> mt.bd;
+    
+    if ( mt.gd > mt.bd ) {
+        cout << " Girls are dramatic yet it is nature to love them, and you do look a charm :) \n " ;
+         }
+         else {
+             cout << " You are gay, you are unacceptable, go die |* \n " ;
+         }
+    }
+     mt.setG_dated(mt.bd, mt.gd);
+     }
